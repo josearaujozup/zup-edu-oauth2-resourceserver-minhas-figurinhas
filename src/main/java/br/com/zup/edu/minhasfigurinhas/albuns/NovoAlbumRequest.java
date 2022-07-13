@@ -37,8 +37,8 @@ public class NovoAlbumRequest {
         return figurinhas;
     }
 
-    public Album toModel() {
-        Album album = new Album(titulo, descricao, "anonymous");
+    public Album toModel(String nome_usuario) {
+        Album album = new Album(titulo, descricao, nome_usuario);
         figurinhas.forEach(f -> {
             Figurinha figurinha = new Figurinha(f.getDescricao(), f.getEnderecoDaImagem());
             album.adiciona(figurinha);
